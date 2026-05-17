@@ -18,13 +18,13 @@ SOURCES += \
 INCLUDEPATH += $$PWD/.
 DEPENDPATH += $$PWD/.
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/./ -llibSDL2.dll
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/./ -llibSDL2.dll
-else:unix: LIBS += -L$$PWD/./ -llibSDL2.dll
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/ -lSDL2
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/ -lSDL2
+else:unix: LIBS += -L$$PWD/ -lSDL2
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/./ -llibSDL2_ttf.dll
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/./ -llibSDL2_ttf.dll
-else:unix: LIBS += -L$$PWD/./ -llibSDL2_ttf.dll
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/ -lSDL2_ttf
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/ -lSDL2_ttf
+else:unix: LIBS += -L$$PWD/ -lSDL2_ttf
 
 
 INCLUDEPATH += $$PWD/SDL2
